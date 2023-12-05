@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 270px;
+}
+
+.title {
+  font-size: 9.6rem;
+  font-weight: 400;
+}
+
+.text {
+  font-size: 2rem;
+  font-weight: 300;
+  max-width: 85px;
+}
