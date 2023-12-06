@@ -1,8 +1,24 @@
-.container {
+.header {
   max-width: 800px;
+  min-height: 185px;
   display: flex;
-  justify-content: space-between;
   padding: 0 30px;
   margin: auto;
   background-color: #ffffff;
+  position: relative;
+}
+
+.img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media (max-width: 500px) {
+  .header {
+    justify-content: center;
+  }
+  .img {
+    display: none;
+  }
 }

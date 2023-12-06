@@ -1,11 +1,12 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { currencyApi } from '../api/api';
-import { currencySlice } from './slices/slice';
+import { currencyApi } from '../modules/CurrencySelect/api/api';
+import { currencySlice } from '../modules/CurrencySelect/store/currency.slice';
 
 const rootReducer = combineReducers({
   currency: currencySlice.reducer,
   [currencyApi.reducerPath]: currencyApi.reducer,
 });
+
 export const store = configureStore({
   reducer: rootReducer,
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(currencyApi.middleware),

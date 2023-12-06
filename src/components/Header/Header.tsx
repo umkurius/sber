@@ -5,9 +5,9 @@ import s from './Header.module.css';
 
 export const Header = () => {
   return (
-    <header className={s.container}>
+    <header className={s.header}>
       <Title />
-      <img src={KittenImage} alt='cat' />
+      <img className={s.img} src={KittenImage} alt='cat' />
     </header>
   );
 };

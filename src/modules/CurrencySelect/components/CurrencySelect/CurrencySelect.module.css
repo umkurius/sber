@@ -1,0 +1,7 @@
+.select {
+  z-index: 15;
+  font-size: 1.8rem;
+  font-weight: 300;
+  width: 180px;
+  height: 40px;
+}

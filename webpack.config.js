@@ -11,12 +11,15 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
   },
+  devServer: {
+    historyApiFallback: true,
+  },
   module: {
     rules: [
       {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
-        use: 'ts-loader',
+        use: ['ts-loader'],
       },
       {
         test: /\.css$/,
