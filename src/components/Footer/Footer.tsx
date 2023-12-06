@@ -3,10 +3,11 @@ import { getCurrencyName } from '../../modules/CurrencySelect/store/currency.sel
 import s from './Footer.module.css';
 
 export const Footer = () => {
-  const name = useSelector(getCurrencyName);
+  const currencyName = useSelector(getCurrencyName);
+
   return (
     <footer className={s.footer}>
-      <p className={s.text}>{name}</p>
+      <p className={s.text}>{currencyName}</p>
     </footer>
   );
 };

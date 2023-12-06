@@ -1,6 +1,6 @@
 import { Footer, Header } from '../../../../components/index';
 
-export const MainPage = () => {
+const MainPage = () => {
   return (
     <>
       <Header />
@@ -8,3 +8,5 @@ export const MainPage = () => {
     </>
   );
 };
+
+export default MainPage;

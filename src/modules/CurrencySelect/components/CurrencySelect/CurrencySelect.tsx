@@ -30,7 +30,6 @@ export const CurrencySelect = () => {
     }
   };
 
-  console.log('render');
   return (
     <>
       {isLoading && <div>Loading...</div>}
