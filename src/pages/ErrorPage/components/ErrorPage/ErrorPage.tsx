@@ -1,7 +1,7 @@
-import s from './ErrorPage.module.css';
+import style from './ErrorPage.module.css';
 
 const ErrorPage = () => {
-  return <h1 className={s.error}>Something went wrong</h1>;
+  return <h1 className={style.error}>Something went wrong</h1>;
 };
 
 export default ErrorPage;

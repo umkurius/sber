@@ -1,12 +1,12 @@
 import { CurrencySelect } from '../../../../modules/CurrencySelect/index';
-import s from './Title.module.css';
+import style from './Title.module.css';
 
 export const Title = () => {
   return (
-    <div className={s.wrap}>
-      <div className={s.title}>
-        <h1 className={s.header}>CAT</h1>
-        <p className={s.text}>currencies academic terms</p>
+    <div className={style.wrap}>
+      <div className={style.title}>
+        <h1 className={style.header}>CAT</h1>
+        <p className={style.text}>currencies academic terms</p>
       </div>
       <CurrencySelect />
     </div>

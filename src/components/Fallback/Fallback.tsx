@@ -1,5 +1,5 @@
-import s from './Fallback.module.css';
+import style from './Fallback.module.css';
 
 export const Fallback = () => {
-  return <p className={s.fallback}>Oops</p>;
+  return <p className={style.fallback}>Oops</p>;
 };
