@@ -1,0 +1,28 @@
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 270px;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  font-size: 9.6rem;
+  font-weight: 400;
+}
+
+.text {
+  font-size: 2rem;
+  font-weight: 300;
+  max-width: 85px;
+}
+
+@media (max-width: 500px) {
+  .wrap {
+    align-items: center;
+  }
+}
