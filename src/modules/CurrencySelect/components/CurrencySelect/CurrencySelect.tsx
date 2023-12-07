@@ -35,22 +35,13 @@ export const CurrencySelect = () => {
       {isLoading && <div>Loading...</div>}
       {!isLoading && data && (
         <Select
-          styles={{
-            option: (baseStyles, state) => ({
-              ...baseStyles,
-              backgroundColor: state.isFocused ? '#F0EFEF' : 'white',
-              color: '#000000',
-            }),
-            control: (baseStyles) => ({
-              ...baseStyles,
-              borderRadius: '10px',
-            }),
-          }}
           className={s.select}
+          classNamePrefix='custom'
           defaultValue={options[0]}
           options={options}
           onChange={handleChange}
           maxMenuHeight={160}
+          isSearchable={false}
         />
       )}
     </>

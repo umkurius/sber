@@ -8,3 +8,22 @@ html {
   font-family: 'Kreon';
   background-color: #fafafa;
 }
+
+.custom__option:hover {
+  background-color: #f0efef;
+  color: #000000;
+  cursor: pointer;
+}
+
+.custom__option--is-selected {
+  background-color: #f0efef !important;
+  color: #000000 !important;
+}
+
+.custom__control {
+  border-radius: 10px !important;
+}
+
+.custom__control:hover {
+  cursor: pointer;
+}
