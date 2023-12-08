@@ -7,7 +7,7 @@ import { setCurrencyName } from '../../store/currency.action';
 import style from './CurrencySelect.module.css';
 
 export const CurrencySelect = () => {
-  const { data, isLoading } = useGetCurrenciesQuery();
+  const { data, isLoading, error } = useGetCurrenciesQuery();
   const dispatch = useAppDispatch();
 
   const defaultValue = data ? data[0].name : '';
@@ -31,6 +31,7 @@ export const CurrencySelect = () => {
 
   return (
     <>
+      {error && <div>Try again later</div>}
       {isLoading && <div>Loading...</div>}
       {!isLoading && data && (
         <Select
