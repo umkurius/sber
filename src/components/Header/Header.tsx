@@ -1,13 +1,13 @@
 import KittenImage from '../../assets/img/Kitten.png';
 import { Title } from '../../pages/MainPage/components/Title/Title';
 
-import s from './Header.module.css';
+import style from './Header.module.css';
 
 export const Header = () => {
   return (
-    <header className={s.header}>
+    <header className={style.header}>
       <Title />
-      <img className={s.img} src={KittenImage} alt='cat' />
+      <img className={style.img} src={KittenImage} alt='cat' />
     </header>
   );
 };

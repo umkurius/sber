@@ -1,21 +1,20 @@
 import { useEffect } from 'react';
 import Select, { OnChangeValue } from 'react-select';
+import { TOptions } from 'types/types';
 import { useAppDispatch } from '../../../../hooks/hooks';
 import { useGetCurrenciesQuery } from '../../api/api';
 import { setCurrencyName } from '../../store/currency.action';
-
-import { TOptions } from 'types/types';
-import s from './CurrencySelect.module.css';
+import style from './CurrencySelect.module.css';
 
 export const CurrencySelect = () => {
-  const { data, isLoading } = useGetCurrenciesQuery();
+  const { data, isLoading, error } = useGetCurrenciesQuery();
   const dispatch = useAppDispatch();
 
   const defaultValue = data ? data[0].name : '';
 
   const options = data
-    ? data.map((el) => {
-        return { value: el.name, label: el.id };
+    ? data.map((item) => {
+        return { value: item.name, label: item.id };
       })
     : [];
 
@@ -32,10 +31,11 @@ export const CurrencySelect = () => {
 
   return (
     <>
+      {error && <div>Try again later</div>}
       {isLoading && <div>Loading...</div>}
       {!isLoading && data && (
         <Select
-          className={s.select}
+          className={style.select}
           classNamePrefix='custom'
           defaultValue={options[0]}
           options={options}
